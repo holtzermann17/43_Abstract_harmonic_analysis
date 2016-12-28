@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BargmannTransform}
+\pmcreated{2013-03-22 16:44:45}
+\pmmodified{2013-03-22 16:44:45}
+\pmowner{ErlendA}{6587}
+\pmmodifier{ErlendA}{6587}
+\pmtitle{Bargmann transform}
+\pmrecord{7}{38970}
+\pmprivacy{1}
+\pmauthor{ErlendA}{6587}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{43A15}
+\pmdefines{Bargmann transform}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{defn}{Definition}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{prop}{Proposition}
+\newtheorem*{open}{Open Question}
+\newtheorem*{cond}{Condition}
+\newenvironment{skproof}{\noindent\emph{Sketch Proof.}}{\qed\\}
+\newtheorem*{rem}{Remark}
+
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+
+\newcommand{\eq}{\ensuremath{\thicksim}}
+\newcommand{\iso}{\cong}
+\newcommand{\normal}{\lhd}
+\newcommand{\Aut}[1]{{\ensuremath{\mathrm{Aut}({#1})}}}
+\newcommand{\GL}[2]{{\ensuremath{\mathrm{GL}({#1},{#2})}}}
+\newcommand{\pad}{\ensuremath{\Box}}
+\begin{document}
+The Bargmann transform of a function, $f$, is a linear map $B: X(\mathbb{R}) \to Y(\mathbb{C})$ defined by
+
+$$ B f(z)=\sqrt{2} \int_\mathbb{R} f(t)  \hskip2pt e^{2\pi t z-\pi t^2 - \frac{\pi}{2} z^2}\, dt $$
+
+\begin{thm}
+The Bargmann transform on $L^2(\mathbb{R})$, $B: L^2(\mathbb{R}) \to \mathcal{F}^2(\mathbb{C})$, is a unitary transformation. Here $\mathcal{F}^2(\mathbb{C})$ is the Fock space.
+\end{thm}
+
+
+
+\begin{thebibliography}{1}
+\bibitem{gg} Karlheinz GrÃ¶chenig, "Foundations of Time-Frequency Analysis," {\it BirkhhÃ¤user} (2000)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

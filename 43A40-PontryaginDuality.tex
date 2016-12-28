@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PontryaginDuality}
+\pmcreated{2013-03-22 17:42:42}
+\pmmodified{2013-03-22 17:42:42}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Pontryagin duality}
+\pmrecord{7}{40156}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{43A40}
+\pmclassification{msc}{22B05}
+\pmclassification{msc}{22D35}
+\pmsynonym{Pontrjagin duality}{PontryaginDuality}
+\pmsynonym{Pontriagin duality}{PontryaginDuality}
+\pmrelated{DualityInMathematics}
+\pmdefines{Pontryagin dual}
+\pmdefines{Pontrjagin dual}
+\pmdefines{Pontriagin dual}
+\pmdefines{dual of an abelian group}
+\pmdefines{character}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{amsthm}
+
+
+% define commands here
+
+\begin{document}
+\section{Pontryagin dual}
+
+Let $G$ be a locally compact abelian \PMlinkname{group}{TopologicalGroup} and $\mathbb{T}$ the \PMlinkname{1-torus}{NTorus}, i.e. the unit circle in $\mathbb{C}$.
+
+{\bf Definition -} A continuous homomorphism $G \longrightarrow \mathbb{T}$ is called a {\bf character} of $G$. The set of all characters is called the {\bf Pontryagin dual} of $G$ and is denoted by $\hat{G}$.
+
+Under pointwise multiplication $\hat{G}$ is also an abelian group. Since $\hat{G}$ is a group of functions we can make it a topological group under the compact-open topology (topology of convergence on compact sets).
+
+\section{Examples}
+\begin{itemize}
+\item $\hat{\mathbb{Z}} \cong \mathbb{T}$, via $n \mapsto z^n$ with $z \in \mathbb{T}$.
+\item $\hat{\mathbb{T}} \cong \mathbb{Z}$, via $z \mapsto z^n$ with $n \in \mathbb{Z}$.
+\item $\hat{\mathbb{R}} \cong \mathbb{R}$, via $t \mapsto e^{ist}$ with $s \in \mathbb{R}$.
+\end{itemize}
+
+\section{Properties}
+
+The following are some important \PMlinkescapetext{properties} of the dual group:
+
+{\bf Theorem -} Let $G$ be a locally compact abelian group. We have that
+\begin{itemize}
+\item $\hat{G}$ is also locally compact.
+\item $\hat{G}$ is second countable if and only if $G$ is second countable.
+\item $\hat{G}$ is compact if and only if $G$ is discrete.
+\item $\hat{G}$ is discrete if and only if $G$ is compact.
+\item $\widehat{(\oplus_{i \in J} G_i)} \cong \oplus_{i \in J} \hat{G_i}$ for any finite set $J$. This isomorphism is natural.
+\end{itemize}
+
+\section{Pontryagin duality}
+
+Let $f:G \longrightarrow H$ be a continuous homomorphism of locally compact abelian groups. We can associate to it a canonical map $\hat{f}:\hat{H} \longrightarrow \hat{G}$ defined by
+\begin{align*}
+\hat{f}(\phi)\,(s):= \phi(f(s))\;, \qquad\qquad \phi \in \hat{H},\; s \in G
+\end{align*}
+This canonical construction preserves identity mappings and compositions, i.e. the dualization process $\hat{\;}$ is a functor:
+
+{\bf Theorem -} The dualization $\hat{\;}:\mathord{\mathbf{LcA}} \longrightarrow \mathord{\mathbf{LcA}} $ is a contravariant functor from the category of locally compact abelian groups to itself.
+
+\section{Isomorphism with the second dual}
+
+Although in general there is not a canonical identification of $G$ with its dual $\hat{G}$, there is a natural isomorphism between $G$ and its dual's dual $\hat{\hat{G}}$:
+
+{\bf Theorem -} The map $G \longrightarrow \hat{\hat{G}}$ defined by $s \mapsto \hat{\hat{s}}$, where $\hat{\hat{s}}(\phi) := \phi(s)$, is a natural isomorphism between $G$ and $\hat{\hat{G}}$.
+
+\section{Applications}
+
+The study of dual groups allows one to visualize Fourier series, Fourier transforms and discrete Fourier transforms from a more abstract and unified view-point, providing the \PMlinkescapetext{basis} for a general definition of Fourier transform. Thus, dual groups and Pontryagin duality are the \PMlinkescapetext{foundations} of the \PMlinkescapetext{theory} of abstract abelian harmonic analysis.
+%%%%%
+%%%%%
+\end{document}

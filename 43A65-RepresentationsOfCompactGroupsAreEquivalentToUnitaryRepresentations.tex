@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RepresentationsOfCompactGroupsAreEquivalentToUnitaryRepresentations}
+\pmcreated{2013-03-22 18:02:28}
+\pmmodified{2013-03-22 18:02:28}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{representations of compact groups are equivalent to unitary representations}
+\pmrecord{9}{40563}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{43A65}
+\pmclassification{msc}{22A25}
+\pmclassification{msc}{22C05}
+%\pmkeywords{compact group}
+%\pmkeywords{unitary representation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapephrase{representation}
+\PMlinkescapephrase{representations}
+\PMlinkescapephrase{equivalent}
+
+{\bf Theorem -} Let $G$ be a compact topological group. If $(\pi, V)$ is a \PMlinkname{finite-dimensional representation}{TopologicalGroupRepresentation} of $G$ in a normed vector space $V$, then $\pi$ is \PMlinkname{equivalent}{TopologicalGroupRepresentation} to a unitary representation.
+
+$\,$
+
+{\bf \emph{Proof:}}  Let $\langle \cdot, \cdot \rangle$ denote an inner product in $V$. Define a new inner product in the vector space $V$ by
+\begin{align*}
+\langle v, w \rangle_1 := \int_G \big\langle \pi(s)v, \pi(s)w \big\rangle \;d\mu(s)
+\end{align*}
+where $\mu$ is a Haar measure in $G$. It is easy to see that $\langle \cdot, \cdot \rangle_1$ defines indeed an inner product, noting that $\langle \pi(\cdot)v, \pi(\cdot)w \rangle$ is a continuous function in $G$.
+
+Now we claim that, for every $s \in G$, $\pi(s)$ is a unitary operator for this new inner product. This is true since
+\begin{eqnarray*}
+\big\langle \pi(t)v, \pi(t)w \big\rangle_1 & = & \int_G \big\langle \pi(s)\pi(t)v, \pi(s)\pi(t)w \big\rangle \;d\mu(s)\\
+& = & \int_G \langle \pi(st)v, \pi(st)w \rangle \;d\mu(s)\\
+& = & \int_G \langle \pi(s)v, \pi(s)w \rangle \;d\mu(s)\\
+& = & \langle v, w \rangle_1
+\end{eqnarray*}
+
+Denote by $V'$ the space $V$ endowed the inner product $\langle \cdot, \cdot \rangle_1$. As we have seen, $(\pi, V')$ is a unitary representation of $G$ in $V'$. Of course, $(\pi, V')$ and $(\pi, V)$ are equivalent representations, since
+\begin{align*}
+\pi=\mathrm{id}^{-1}\,\pi\,\mathrm{id}
+\end{align*}
+where $\mathrm{id}:V \longrightarrow V'$ is the identity mapping. Thus, $(\pi, V)$ is equivalent to a unitary representation. $\square$
+%%%%%
+%%%%%
+\end{document}

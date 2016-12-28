@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAngleSumIdentities}
+\pmcreated{2013-05-28 14:35:29}
+\pmmodified{2013-05-28 14:35:29}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of angle sum identities}
+\pmrecord{15}{39798}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{43-00}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{42-00}
+\pmclassification{msc}{33B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+We will derive the angle sum identities for the various trigonometric
+functions here.  We begin by deriving the identity for the sine by means 
+of a geometric argument and then obtain the remaining identities by
+algebraic manipulation.
+
+\begin{thm}
+\[
+\sin (x + y) = \sin (x) \cos (y) + \cos (x) \sin (y)
+\]
+\end{thm}
+
+\begin{proof}
+Let us make the restrictions $0^\circ < x < 90^\circ$ and 
+$0^\circ < y < 90^\circ$ for the time being.  Then we may draw a
+triangle $ABC$ such that $\angle CAB = x$ and $\angle ABF = y$:
+\[
+\begin{xy}
+,(0,0)
+;(70,0)**@{-}
+;(40,30)**@{-}
+;(0,0)**@{-}
+,(-2,-2)*{A}
+,(72,-2)*{B}
+,(40,32)*{C}
+\end{xy}
+\]
+Since the angles of a triangle add up to $180^\circ$, we must have
+$\angle BCA = 180^\circ - x - y$, so we have $\sin (\angle BCA) =
+\sin (180^\circ - x - y) = \sin (x + y)$.
+
+We now draw perpendiculars two different ways in order to derive ratios.
+First, we drop a perpendicular $AD$ from $C$ to $AB$:
+\[
+\begin{xy}
+,(0,0)
+;(70,0)**@{-}
+;(40,30)**@{-}
+;(0,0)**@{-}
+,(40,30)
+;(40,0)**@{-}
+,(-2,-2)*{A}
+,(72,-2)*{B}
+,(40,32)*{C}
+,(40,-2)*{D}
+\end{xy}
+\]
+Since $ACD$ and $BCD$ are right triangles we have, by definition,
+\[
+\cot (\angle CAB) = \overline{AD} / \overline{CD} \qquad
+\cot (\angle ABC) = \overline{BD} / \overline{CD} \qquad
+\sin (\angle CAB) = \overline{CD} / \overline{AC} .
+\]
+
+Second, we draw a perpendicular $AE$ form $A$ to $BC$.  Depending on whether
+$x+y < 90^\circ$ or $x+y < 90^\circ$ the point $E$ will or will not lie between
+$B$ and $C$, as illustrated below.  (There is also the case $x+y = 90^\circ$, 
+but it is trivial.)
+\[
+\begin{xy}
+,(0,0)
+;(70,0)**@{-}
+;(30,40)**@{-}
+;(0,0)**@{-}
+,(0,0)
+;(35,35)**@{-}
+,(-2,-2)*{A}
+,(72,-2)*{B}
+,(30,42)*{C}
+,(36,36)*{E}
+\end{xy}
+\]
+\[
+\begin{xy}
+,(0,0)
+;(70,0)**@{-}
+;(35,35)**@{-}
+;(0,0)**@{-}
+,(0,0)
+;(40,30)**@{-}
+,(-2,-2)*{A}
+,(72,-2)*{B}
+,(41,31)*{C}
+,(35,37)*{E}
+\end{xy}
+\]
+Either way, $ABE$ and $ACE$ are right triangles, and we have, by definition,
+\[
+\sin (\angle BCA) = \overline{AE} / \overline{AC} \qquad
+\sin (\angle ABC) = \overline{AE} / \overline{AB} .
+\]
+Combining these ratios, we find that
+\[
+\sin (\angle BCA) / \sin (\angle ABC) = \overline{AB} / \overline{AC} .
+\]
+
+To finish deriving the sum identity, we manipulate the ratios derived above
+algebraically and use the fact that $\overline{AD} + \overline{BD} = 
+\overline{AB}$:
+\begin{align*}
+\sin (x + y) = \sin (\angle BCA) &=
+\overline{AB} \, \sin (\angle ABC) / \overline{AC} \\ &=
+(\overline{AD} + \overline{BD}) \sin (\angle ABC) / \overline{AC} \\ &=
+\overline{CD} \left( \cot (\angle CAB) + \cot (\angle ABC) \right) / 
+\sin (\angle ABC) \overline{AC}  \\ &=
+\sin (\angle CAB) \sin (\angle ABC)
+\left( {\cos (\angle CAB) \over \sin (\angle CAB)} +
+{\cos (\angle ABC) \over \sin (\angle ABC)} \right) \\ &=
+\sin (\angle CAB) \cos (\angle ABC) + 
+\cos (\angle CAB) \sin (\angle ABC) \\ &=
+\sin (x) \cos (y) + \cos (x) \sin (y)
+\end{align*}
+
+To lift the restriction on the range of $x$ and $y$, we use the identities
+for complements and negatives of angles.  
+
+\end{proof}
+
+\textbf{Entry under construction}
+%%%%%
+%%%%%
+\end{document}

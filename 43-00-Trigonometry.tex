@@ -1,0 +1,224 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Trigonometry}
+\pmcreated{2013-03-22 15:05:00}
+\pmmodified{2013-03-22 15:05:00}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{trigonometry}
+\pmrecord{31}{36807}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{43-00}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{42-00}
+\pmclassification{msc}{33B10}
+\pmrelated{DefinitionsInTrigonometry}
+\pmrelated{ExactTrigonometryTables}
+\pmrelated{Sohcahtoa}
+\pmrelated{DeterminingSignsOfTrigonometricFunctions}
+\pmrelated{TerminalRay}
+\pmrelated{CalculatorTrigonometricFunctions}
+\pmrelated{GoniometricFormulae}
+\pmrelated{Sinusoid}
+\pmrelated{CyclometricFunctions}
+\pmdefines{sine}
+\pmdefines{cosine}
+\pmdefines{tangent}
+\pmdefines{secant}
+\pmdefines{cosecant}
+\pmdefines{cotangent}
+
+\usepackage{pstricks}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\usepackage[fleqn]{amsmath}
+\begin{document}
+\section{Geometrical definitions}
+Trigonometry arose in ancient times out of attempts to measure the lengths of various lines associated with circles. For example, consider this diagram showing the upper right quadrant with a unit circle:
+\begin{center}
+\begin{pspicture*}(-1,-1)(5,5)
+\rput(-1.01,-1.01){.}
+\rput(5.01,5.01){.}
+\psline(0,-1)(0,5)
+\psline(-1,0)(5,0)
+\psarc(0,0){4}{350}{100}
+\psdot*(0,0)
+\uput{.2}[225](0,0){$O$}
+\psdot*(4,0)
+\uput{.2}[315](4,0){$A$}
+\psdot*(4,2.3094)
+\uput{.2}[0](4,2.3094){$B$}
+\psline(0,0)(4,0)
+\psline(0,0)(4,2.3094)
+\psline(4,0)(4,2.3094)
+\psdot*(3.4641,2)
+\uput{.2}[90](3.4641,2){$C$}
+\psdot*(3.4641,0)
+\uput{.2}[270](3.4641,0){$D$}
+\psline(3.4641,2)(3.4641,0)
+\uput{.2}[135](0,2){1}
+\uput{.2}[90]{30}(1,0.577){$OB=\sec\alpha$}
+\uput{.1}[0]{90}(4,1){$\tan\alpha$}
+\uput{.2}[30]{0}(.2,0){$\alpha$}
+\end{pspicture*}
+\end{center}
+The point $B$, external to the circle with center $O$, determines a unique secant $BO$ and two tangent lines of equal length, one of which is $BA$. It thus also uniquely determines an angle $\alpha=\angle AOB$. The trigonometric functions $\sec$ and $\tan$ simply measure the ratio of the lengths of the secant and tangent lines to the radius of the circle.
+
+Thus, in the diagram, $\tan\alpha=AB = AB:OA$. But triangles $OAB$ and $ODC$ are obviously similar, so $\tan\alpha$ is also equal to $CD:OD$, and we recover the usual current-day definition of $\tan$. Similarly, from the diagram, $\sec\alpha = OB = OB:OA$ and again, using similarity, we also have $\sec\alpha=OC:OD$, which is again the usual modern definition.
+
+The cosecant, $\csc$, is the ratio of the secant to the \emph{other} leg of the right triangle. Using the standard definitions today for $\sec$ and $\csc$, we see that this is correct:
+\[\csc(x)=\frac{\sec(x)}{\tan(x)}=\frac{1}{\cos(x)}\cdot\frac{cos(x)}{\sin(x)}=\frac{1}{\sin(x)}\]
+
+The sine arose in attempts to measure the length of a chord traversing a given angle on a circle. Consider the following diagram:
+\begin{center}
+\begin{pspicture*}(-5,-5)(5,5)
+\rput(-5.01,-5.01){.}
+\rput(5.01,5.01){.}
+\psline(0,-5)(0,5)
+\psline(-5,0)(5,0)
+\pscircle(0,0){4}
+\psdot*(0,0)
+\uput{.2}[225](0,0){$O$}
+\psline(0,0)(4,0)
+\psline(0,0)(3.4641,2)
+\psline(0,0)(3.4641,-2)
+\psdot*(3.4641,2)
+\uput{.2}[45](3.4641,2){$C$}
+\psdot*(3.4641,0)
+\uput{.2}[270](3.4641,0){$D$}
+\psdot*(3.4641,-2)
+\uput{.2}[315](3.4641,-2){$E$}
+\psline(3.4641,-2)(3.4641,2)
+\uput{.2}[135](0,2){1}
+\uput{.2}[30]{0}(.2,0){$\alpha$}
+\uput{.2}[330]{0}(.2,0){$\alpha$}
+\psdot*(-3.9,0.8888)
+\uput{.2}[170](-3.9,.8888){$F$}
+\psline(-3.9,.8888)(3.4641,2)
+\psline(-3.9,.8888)(3.4641,-2)
+\uput{.2}[0](-3.9,.8888){$\alpha$}
+\end{pspicture*}
+\end{center}
+Here, the arc $CE$ is the circular angle $\alpha$, which is also $\angle CFE$, $\angle COD$, and $\angle DOE$ (recall that a circumferential angle is the same measure as the arc subtended, while a central angle is twice the arc subtended). The length of the chord $CE$ is in fact $2\sin\alpha$. Presumably because central angles are easier to work with, the common definition was that of the half-chord, and one can see by considering $\triangle COD$ that in fact $CD$ is $\sin\alpha$ using the modern definitions.
+
+The term ``sine'' has an interesting history. The Hindus gave the name \emph{jiva} to the half-chord $CD$; the Arabs used (or created) the word \emph{jiba} for this concept. When Robert of Chester, an early translator of al-Khowarizmi's \emph{Algebra}, translated this word, he mistook it for a similar Arabic word, \emph{jaib}, which means ``bay'' or ``inlet''. As a result, he used the Latin term ``sinus'', which also means bay or inlet.
+
+To understand how the trigonometric functions are defined today, consider the right triangle $ABC$ below.
+\begin{center}
+\includegraphics{triangle}
+\end{center}
+Noting that $0^\circ<\alpha<90^\circ$, we define the trigonometric functions \emph{sine, cosine, tangent, secant, cosecant and cotangent} for angle $\alpha$ respectively as:
+$$\sin(\alpha)= \frac{BC}{CA},\qquad\qquad \csc(\alpha) = \frac{CA}{BC}$$
+$$\cos(\alpha)= \frac{AB}{CA},\qquad\qquad \sec(\alpha) = \frac{CA}{AB}$$
+$$\tan(\alpha)= \frac{BC}{AB},\qquad\qquad \cot(\alpha) = \frac{AB}{BC}$$
+
+We will discuss later how to extend these definitions to a broader set of values for $\alpha$.
+
+Several identities follow directly from the definitions:
+\begin{itemize}
+\item $\tan(\alpha)=\sin(\alpha)/\cos(\alpha)$.
+\item $\sec(\alpha)=1/\cos(\alpha),\qquad \csc(\alpha)=1/\sin(\alpha),\qquad\cot(\alpha)=1/\tan(\alpha)$.
+\item $\sin(\alpha) = \cos(90^\circ-\alpha),\qquad\tan(\alpha)=\cot(90^\circ -\alpha),\qquad\sec(\alpha)=\csc(90^\circ-\alpha)$.
+\end{itemize}
+The last property follows from the fact that $\angle ACB=90^\circ-\alpha$.
+
+The Pythagorean theorem states that $CA^2 = AB^2+BC^2$ and thus
+$$
+1=\frac{CA^2}{CA^2}=\frac{AB^2+ BC^2}{CA^2}
+= \left(\frac{AB}{CA}\right)^2+\left(\frac{BC}{CA}\right)^2 = (\cos(\alpha))^2 + (\sin(\alpha))^2.
+$$
+It is customary to write $(\sin(\alpha))^n$, $(\cos(\alpha))^n$, etc. as $\sin^n(\alpha)$, $\cos^n(\alpha)$, etc. respectively, so the previous identity is usually written as
+$$
+\sin^2(\alpha) + \cos^2(\alpha) = 1
+$$
+and it is known as the Pythagorean identity.
+Notice that the first three identities let us to express any expression involving trigonometric functions using only sines and cosines, whereas the Pythagorean identity lets us reduce it further, using only sines. This technique is sometimes used when proving trigonometric identities.
+
+Two other identities that can be obtained from the Pythagorean theorem or from the Pythagorean identity are
+$$
+\tan^2(\alpha) + 1 = \sec^2(\alpha),\qquad 1 + \cot^2(\alpha) = \csc^2(\alpha).
+$$
+
+\section{Extending the domain}
+There are several approaches for extending the domain of the trigonometric functions so they are not restricted to angles between $0$ and $90^\circ$. We could use the angle sum identities below in order to calculate the value of the trigonometric functions outside the given range (for instance, $\sin(120^\circ)$ could be found as $\sin(60^\circ + 60^\circ)$. Some other more formal approaches use power series expansion to define the functions for any real value (or even complex!), but we will use a more geometrical approach, using the unit circle.
+\begin{center}
+\includegraphics{unitcircle}
+\end{center}
+
+Consider a unit circle centered at origin of the plane (that is, a circle of radius $1$ and center $(0,0)$), and draw a ray from the center making an angle of $\alpha$ with the horizontal axis, measured counter-clockwise from the positive $x$-axis. (This ray is the terminal ray of the angle.) Let $P$ be the point of intersection of this line with the circle, and $T$ the intersection with the line $x=1$. Finally, let us denote by $(x,y)$ the coordinates of $P$ and $(1,t)$ the coordinates of $T$.
+
+Since the circle has radius $1$, the distance from origin to $P$ is also $1$ and thus
+$$\cos\alpha= \frac{x}{1}=x,\qquad \sin\alpha=\frac{y}{1}=y,$$
+in other words, the coordinates of $P$ are precisely $(\cos \alpha,\sin\alpha)$.
+
+Now, the two right triangles made with the projections of $P$ and $T$ to the $x$-axis are similar, so we have
+$$
+\tan \alpha = \frac{y}{x}=\frac{t}{1}=t,
+$$
+that is, the point $t$ has ordinate equal to $\tan \alpha$.
+
+This formulation makes it much easier to generalize the definitions to arbitrary angles: $\cos\alpha, \sin\alpha$ are the coordinates of the intersection of the circle with the line through the origin making angle $\alpha$ with the positive $x$-axis:
+\begin{center}
+\includegraphics{unitcircle2}
+\end{center}
+
+You may be wondering now why we put $-\tan \alpha$ instead of $\tan\alpha$ if the analogy was to be continued. The reason is that we only need $\sin \alpha$ and $\cos \alpha$ to define all the other trigonometric functions, and given that
+$$\tan\alpha=\frac{\sin\alpha}{\cos\alpha}$$
+we use that identity to extend the domain of $\tan \alpha$. In the particular case of the drawing above, both $\cos \alpha$ and $\sin\alpha$ are negative, so their quotient must be positive, and that's why we added a minus sign to $\tan\alpha$.
+
+The geometrical approach lets us easily verify the following relations:
+\begin{alignat*}{5}
+&\sin(180^\circ-\alpha)=\sin\alpha, \quad &&\sin(180^\circ+\alpha)= -\sin\alpha,\quad &&\sin(-\alpha)=-\sin\alpha\\
+&\cos(180^\circ-\alpha)=-\cos\alpha, \quad &&\cos(180^\circ+\alpha)= -\cos\alpha,\quad &&\cos(-\alpha)=\cos\alpha\\
+&\tan(180^\circ-\alpha)=-\tan\alpha, \quad &&\tan(180^\circ+\alpha)= \tan\alpha,\quad &&\tan(-\alpha)=-\tan\alpha
+\end{alignat*}
+
+\section{Graphs}
+The graph of $\sin$ appears below. Note that the $x$-axis is scaled not in degrees, but rather in radians.
+\begin{center}
+\includegraphics{sinx}
+\end{center}
+
+The graph of $\cos$ is below. Note the similarity between the two graphs: the graphs of $\cos$ is just like the graph of $\sin$, but shifted by $90^\circ$ ($\pi/2$ radians). This precisely reflects the identity $\sin \alpha = \cos (\alpha-90^\circ)$.
+\begin{center}
+\includegraphics{cosx}
+\end{center}
+
+Also notice that you can read off directly from the graphs the facts that
+$$\sin\alpha=-\sin(-\alpha),\qquad\cos\alpha=\cos(-\alpha)$$
+\section{Trigonometrical identities}
+
+There are literally thousands of \PMlinkname{trigonometric identities}{GoniometricFormulae}. Some of the most common (and most useful) are:
+
+Sum and difference of angles
+
+\begin{align*}
+\sin(x+y) &= \sin x\cos y + \cos x \sin y,&\  \sin(x-y)& = \sin x\cos y - \cos x \sin y, \\
+\cos(x+y) &= \cos x\cos y - \sin x \sin y,&\ \cos(x-y)& = \cos x\cos y + \sin x \sin y,\\
+\tan(x+y)  &= \frac{\tan x + \tan y}{1-\tan x\tan y},&\  \tan(x-y)&  = \frac{\tan x - \tan y}{1+\tan x\tan y}.
+\end{align*}
+
+(There is a proof of angle sum identities, as well as a geometric derivation of addition formulas for sine and cosine, on this site).
+
+Half and double angles
+
+The double angle formulas are derived directly from the sum of angles formulas above. The half-angle formulas can then be derived from the double angle formulas by substituting $x/2$ for $x$ and simplifying, using the identity $sin^2+cos^2=1$.
+\begin{align*}
+ \sin(x/2) = \pm\sqrt{\frac{1-\cos x }{2}}, && \sin(2x) &= 2\sin x \cos x,\\
+ \cos(x/2)= \pm\sqrt{\frac{1+\cos x}{2}},&&\cos(2x) &= \cos^2 x - \sin^2 x = 2\cos^2 x -1 = 1-2\sin^2 x.
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

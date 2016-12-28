@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalGroupRepresentation}
+\pmcreated{2013-03-22 18:02:18}
+\pmmodified{2013-03-22 18:02:18}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{topological group representation}
+\pmrecord{8}{40559}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{43A65}
+\pmclassification{msc}{22A25}
+\pmclassification{msc}{22A05}
+\pmsynonym{representation of topological groups}{TopologicalGroupRepresentation}
+\pmdefines{equivalent representations of topological groups}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section{Finite Dimensional Representations}
+
+Let $G$ be a topological group and $V$ a finite-dimensional normed vector space. We denote by $GL(V)$ the general linear group of $V$, endowed with the topology coming from the operator norm.
+
+Regarding only the group structure of $G$, recall that a representation of $G$ in $V$ is a group homomorphism $\pi:G \longrightarrow GL(V)$.
+
+$\,$
+
+{\bf Definition -} A {\bf representation} of the topological group $G$ in $V$ is a continuous group homomorphism $\pi:G \longrightarrow GL(V)$, i.e. is a continuous representation of the abstract group $G$ in $V$.
+
+$\,$
+
+We have the following equivalent definitions:
+
+\begin{itemize}
+\item A representation of $G$ in $V$ is a group homomorphism $\pi:G \longrightarrow GL(V)$ such that the mapping $G \times V \longrightarrow V$ defined by
+$(g,v) \mapsto \pi(g)v\;$
+is continuous.
+\end{itemize}
+\begin{itemize}
+\item A representation of $G$ in $V$ is a group homomorphism $\pi:G \longrightarrow GL(V)$ such that, for every $v \in V$, the mapping $G \longrightarrow V$ defined by
+$g \mapsto \pi(g)v\;$
+is continuous.
+\end{itemize}
+
+\section{Representations in Hilbert Spaces}
+Let $G$ be a topological group and $H$ a Hilbert space. We denote by $B(H)$ the algebra of bounded operators endowed with the strong operator topology (this topology does not coincide with the norm topology unless $H$ is finite-dimensional).  Let $\mathcal{G}(H)$ the set of invertible operators in $B(H)$ endowed with the subspace topology.
+
+$\,$
+
+{\bf Definition -} A {\bf representation} of the topological group $G$ in $H$ is a continuous group homomorphism $\pi:G \longrightarrow \mathcal{G}(H)$, i.e. is a continuous representation of the abstract group $G$ in $H$.
+
+$\,$
+
+We denote by $rep(G, H)$ the set of all representations of $G$ in the Hilbert space $H$.
+
+We have the following equivalent definitions:
+
+\begin{itemize}
+\item A representation of $G$ in $H$ is a group homomorphism $\pi:G \longrightarrow \mathcal{G}(H)$ such that the mapping $G \times H \longrightarrow H$ defined by
+$(g,v) \mapsto \pi(g)v\;$
+is continuous.
+\end{itemize}
+\begin{itemize}
+\item A representation of $G$ in $H$ is a group homomorphism $\pi:G \longrightarrow \mathcal{G}(H)$ such that, for every $v \in H$, the mapping $G \longrightarrow H$ defined by
+$g \mapsto \pi(g)v\;$
+is continuous.
+\end{itemize}
+
+{\bf Remark -} The 3rd definition is exactly the same as the 1st definition, just written in other \PMlinkescapetext{words}.
+
+\section{Representations as G-modules}
+
+Recall that, for an abstract group $G$, it is the same to consider a representation of $G$ or to consider a \PMlinkname{$G$-module}{GModule}, i.e. to each representation of $G$ corresponds a $G$-module and vice-versa.
+
+For a topological group $G$, representations of $G$ satisfy some continuity \PMlinkescapetext{properties}. Thus, we are not interested in all $G$-modules, but rather in those which are compatible with the continuity conditions.
+
+$\,$
+
+{\bf Definition -} Let $G$ be a topological group. A {\bf $G$-module} is a normed vector space (or a Hilbert space) $V$ where $G$ acts continuously, i.e. there is a continuous action $\psi :G \times V \longrightarrow V$.
+
+$\,$
+
+To give a representation of a topological group $G$ is the same as giving a $G$-module (in the sense described above).
+
+\section{Special Kinds of Representations}
+
+\begin{itemize}
+\item \item Let $\pi \in rep(G,H)$. We say that a subspace $V \subseteq H$ is {\bf \PMlinkescapetext{invariant}} by $\pi$ if $V$ is invariant under every operator $\pi(s)$ with $s \in G$.
+\end{itemize}
+\begin{itemize}
+\item \item A {\bf \PMlinkescapetext{subrepresentation}} of a representation $\pi \in rep(G,H)$ is a representation $\pi_0 \in rep(G,H_0)$ obtained from $\pi$ by restricting to a closed \PMlinkescapetext{invariant} subspace $H_0 \subseteq H$.
+\end{itemize}
+\begin{itemize}
+\item \item A representation $\pi \in rep(G,H)$ is said to be {\bf \PMlinkescapetext{irreducible}} if the only closed \PMlinkescapetext{invariant} subspaces of $H$ are the trivial ones, $\{0\}$ and $H$.
+\end{itemize}
+\begin{itemize}
+\item Two representations $\pi_1:G \longrightarrow GL(V_1)$ and $\pi_2:G \longrightarrow GL(V_2)$ of a topological group $G$ are said to be {\bf equivalent} if there exists an invertible linear transformation $T:V_1 \longrightarrow V_2$ such that for every $g \in G$ one has $\pi_1(g) = T^{-1} \pi_2(g) T$.
+
+The definition is similar for Hilbert spaces, by taking $T$ as an invertible bounded linear operator.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

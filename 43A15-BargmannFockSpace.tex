@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BargmannFockSpace}
+\pmcreated{2013-03-22 16:42:44}
+\pmmodified{2013-03-22 16:42:44}
+\pmowner{ErlendA}{6587}
+\pmmodifier{ErlendA}{6587}
+\pmtitle{Bargmann-Fock space}
+\pmrecord{14}{38928}
+\pmprivacy{1}
+\pmauthor{ErlendA}{6587}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{43A15}
+\pmsynonym{Fock space}{BargmannFockSpace}
+\pmdefines{Fock space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The Bargmann-Fock space (or simply Fock space) is the Hilbert space of entire functions, $\mathcal{F}^2(\mathbb{C})$ s.t. 
+$$ \int_\mathbb{C}|F(z)|^2 e^{- \pi |z|^2}dx dy<\infty$$
+with associated inner product
+$$ \int_\mathbb{C}F(z)\overline{G(z)}e^{- \pi |z|^2}dx dy$$
+
+where $z=x+i y$
+
+
+\begin{thebibliography}{2}
+\bibitem{vb} V. Bargmann, ``Remarks on a Hilbert Space of Analytic Function'' {\it Proceedings of the National Academy of Sciences of the United States of America} {\bf 48} (1962): 199 - 204
+\bibitem{vbt} V. Bargmann \& I. T. Todorov, ``Spaces of analytic functions on a complex cone as carriers for the symmetric tensor representations of SO(n)'' {\it Journal of Mathematical Physics} {\bf 18} 6 (1977): 1141 - 1148
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}
