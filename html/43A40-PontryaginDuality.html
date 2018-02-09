@@ -1,0 +1,239 @@
+<!DOCTYPE html><html>
+<head>
+<title>Pontryagin duality</title>
+<!--Generated on Fri Feb  9 21:31:13 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Pontryagin duality</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Pontryagin dual</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a locally compact abelian group (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TopologicalGroup</span>) and <math id="S1.p1.m2" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi>𝕋</mi></math> the 1-torus (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/NTorus</span>), i.e. the unit circle in <math id="S1.p1.m3" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition -</span> A continuous homomorphism <math id="S1.p2.m1" class="ltx_Math" alttext="G\longrightarrow\mathbb{T}" display="inline"><mrow><mi>G</mi><mo>⟶</mo><mi>𝕋</mi></mrow></math> is called a <span class="ltx_text ltx_font_bold">character</span> of <math id="S1.p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. The set of all characters is called the <span class="ltx_text ltx_font_bold">Pontryagin dual</span> of <math id="S1.p2.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and is denoted by <math id="S1.p2.m4" class="ltx_Math" alttext="\hat{G}" display="inline"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover></math>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Under pointwise multiplication <math id="S1.p3.m1" class="ltx_Math" alttext="\hat{G}" display="inline"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover></math> is also an abelian group. Since <math id="S1.p3.m2" class="ltx_Math" alttext="\hat{G}" display="inline"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover></math> is a group of functions we can make it a topological group under the compact-open topology (topology of convergence on compact sets).</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Examples</h2>
+
+<div id="S2.p1" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\hat{\mathbb{Z}}\cong\mathbb{T}" display="inline"><mrow><mover accent="true"><mi>ℤ</mi><mo stretchy="false">^</mo></mover><mo>≅</mo><mi>𝕋</mi></mrow></math>, via <math id="I1.i1.p1.m2" class="ltx_Math" alttext="n\mapsto z^{n}" display="inline"><mrow><mi>n</mi><mo>↦</mo><msup><mi>z</mi><mi>n</mi></msup></mrow></math> with <math id="I1.i1.p1.m3" class="ltx_Math" alttext="z\in\mathbb{T}" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>𝕋</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\hat{\mathbb{T}}\cong\mathbb{Z}" display="inline"><mrow><mover accent="true"><mi>𝕋</mi><mo stretchy="false">^</mo></mover><mo>≅</mo><mi>ℤ</mi></mrow></math>, via <math id="I1.i2.p1.m2" class="ltx_Math" alttext="z\mapsto z^{n}" display="inline"><mrow><mi>z</mi><mo>↦</mo><msup><mi>z</mi><mi>n</mi></msup></mrow></math> with <math id="I1.i2.p1.m3" class="ltx_Math" alttext="n\in\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\hat{\mathbb{R}}\cong\mathbb{R}" display="inline"><mrow><mover accent="true"><mi>ℝ</mi><mo stretchy="false">^</mo></mover><mo>≅</mo><mi>ℝ</mi></mrow></math>, via <math id="I1.i3.p1.m2" class="ltx_Math" alttext="t\mapsto e^{ist}" display="inline"><mrow><mi>t</mi><mo>↦</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></math> with <math id="I1.i3.p1.m3" class="ltx_Math" alttext="s\in\mathbb{R}" display="inline"><mrow><mi>s</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Properties</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">The following are some important  of the dual group:</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem -</span> Let <math id="S3.p2.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a locally compact abelian group. We have that</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="\hat{G}" display="inline"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover></math> is also locally compact.
+</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="\hat{G}" display="inline"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover></math> is second countable if and only if <math id="I2.i2.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is second countable.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="\hat{G}" display="inline"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover></math> is compact if and only if <math id="I2.i3.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is discrete.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i4.p1.m1" class="ltx_Math" alttext="\hat{G}" display="inline"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover></math> is discrete if and only if <math id="I2.i4.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is compact.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i5.p1.m1" class="ltx_Math" alttext="\widehat{(\oplus_{i\in J}G_{i})}\cong\oplus_{i\in J}\hat{G_{i}}" display="inline"><mrow><mover accent="true"><mrow><mo stretchy="false">(</mo><mrow><msub><mo>⊕</mo><mrow><mi>i</mi><mo>∈</mo><mi>J</mi></mrow></msub><msub><mi>G</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>^</mo></mover><mo>≅</mo><mrow><msub><mo>⊕</mo><mrow><mi>i</mi><mo>∈</mo><mi>J</mi></mrow></msub><mover accent="true"><msub><mi>G</mi><mi>i</mi></msub><mo stretchy="false">^</mo></mover></mrow></mrow></math> for any finite set <math id="I2.i5.p1.m2" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>. This isomorphism is natural.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Pontryagin duality</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p1.m1" class="ltx_Math" alttext="f:G\longrightarrow H" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>G</mi><mo>⟶</mo><mi>H</mi></mrow></mrow></math> be a continuous homomorphism of locally compact abelian groups. We can associate to it a canonical map <math id="S4.p1.m2" class="ltx_Math" alttext="\hat{f}:\hat{H}\longrightarrow\hat{G}" display="inline"><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mo>:</mo><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>⟶</mo><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover></mrow></mrow></math> defined by</p>
+<table id="S6.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S4.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex1.m1" class="ltx_Math" alttext="\displaystyle\hat{f}(\phi)\,(s):=\phi(f(s))\;,\qquad\qquad\phi\in\hat{H},\;s\in
+G" display="inline"><mrow><mrow><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="42.5pt">,</mo><mrow><mrow><mi>ϕ</mi><mo>∈</mo><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover></mrow><mo rspace="5.3pt">,</mo><mrow><mi>s</mi><mo>∈</mo><mi>G</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This canonical construction preserves identity mappings and compositions, i.e. the dualization process <math id="S4.p1.m3" class="ltx_Math" alttext="\hat{\;}" display="inline"><mover accent="true"><mi></mi><mo stretchy="false">^</mo></mover></math> is a functor:</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem -</span> The dualization <math id="S4.p2.m1" class="ltx_Math" alttext="\hat{\;}:\mathord{\mathbf{LcA}}\longrightarrow\mathord{\mathbf{LcA}}" display="inline"><mrow><mover accent="true"><mi></mi><mo stretchy="false">^</mo></mover><mo>:</mo><mrow><mi>𝐋𝐜𝐀</mi><mo>⟶</mo><mi>𝐋𝐜𝐀</mi></mrow></mrow></math> is a contravariant functor from the category of locally compact abelian groups to itself.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Isomorphism with the second dual</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Although in general there is not a canonical identification of <math id="S5.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> with its dual <math id="S5.p1.m2" class="ltx_Math" alttext="\hat{G}" display="inline"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover></math>, there is a natural isomorphism between <math id="S5.p1.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and its dual’s dual <math id="S5.p1.m4" class="ltx_Math" alttext="\hat{\hat{G}}" display="inline"><mover accent="true"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">^</mo></mover></math>:</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem -</span> The map <math id="S5.p2.m1" class="ltx_Math" alttext="G\longrightarrow\hat{\hat{G}}" display="inline"><mrow><mi>G</mi><mo>⟶</mo><mover accent="true"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">^</mo></mover></mrow></math> defined by <math id="S5.p2.m2" class="ltx_Math" alttext="s\mapsto\hat{\hat{s}}" display="inline"><mrow><mi>s</mi><mo>↦</mo><mover accent="true"><mover accent="true"><mi>s</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">^</mo></mover></mrow></math>, where <math id="S5.p2.m3" class="ltx_Math" alttext="\hat{\hat{s}}(\phi):=\phi(s)" display="inline"><mrow><mrow><mover accent="true"><mover accent="true"><mi>s</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, is a natural isomorphism between <math id="S5.p2.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and <math id="S5.p2.m5" class="ltx_Math" alttext="\hat{\hat{G}}" display="inline"><mover accent="true"><mover accent="true"><mi>G</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">^</mo></mover></math>.</p>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Applications</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">The study of dual groups allows one to visualize Fourier series, Fourier transforms and discrete Fourier transforms from a more abstract and unified view-point, providing the  for a general definition of Fourier transform. Thus, dual groups and Pontryagin duality are the  of the  of abstract abelian harmonic analysis.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Pontryagin duality</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PontryaginDuality</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:42:42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:42:42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 43A40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 22B05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 22D35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Pontrjagin duality</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Pontriagin duality</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DualityInMathematics</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Pontryagin dual</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Pontrjagin dual</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Pontriagin dual</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">dual of an abelian group</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">character</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:31:13 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
